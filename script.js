@@ -4,7 +4,7 @@ function volume_sphere(e) {
     e.preventDefault();
 
     let radius = parseFloat(radiusInput.value);
-
+    let v = document.getElementById('volume');
     if (isNaN(radius) || radius <= 0) {
         v.value="NaN"
         return;
@@ -12,7 +12,7 @@ function volume_sphere(e) {
 
     let volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
 
-    let v = document.getElementById('volume');
+    
     v.value = volume.toFixed(4);
 }
 
